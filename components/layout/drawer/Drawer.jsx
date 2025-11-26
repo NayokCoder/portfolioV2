@@ -4,13 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Sheet, SheetBody, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
+import { LucideLayoutDashboard } from "lucide-react";
 
 export default function Drawer() {
-
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open Sheet</Button>
+        <div variant="outline" className="w-12 h-12 bg-secondary-foreground text-secondary rounded-full flex items-center justify-center">
+          <LucideLayoutDashboard />
+        </div>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>

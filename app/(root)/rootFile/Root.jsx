@@ -16,7 +16,7 @@ const Root = () => {
           <div className="space-y-6 lg:space-y-8 py-4 lg:py-6">
             {navItems.map((item) => (
               <div key={item.id} id={item.id} className="space-y-2.5">
-                <div className="bg-card border border-border rounded-lg p-4 lg:p-6 shadow-sm">{item.component}</div>
+                <div className="bg-transparent  rounded-lg p-4 lg:p-6 shadow-sm">{item.component}</div>
               </div>
             ))}
           </div>
