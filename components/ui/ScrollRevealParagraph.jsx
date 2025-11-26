@@ -5,15 +5,12 @@ import { useRef } from "react";
 
 const KEY_PREFIX_LENGTH = 3;
 
-export default function ScrollRevealParagraph({
-  paragraph,
-  className = "",
-}) {
+export default function ScrollRevealParagraph({ paragraph, className = "" }) {
   const container = useRef(null);
   const isInView = useInView(container, {
     once: false,
-    amount: 0.5,
-    margin: "-100px 0px -100px 0px"
+    amount: 0.3,
+    margin: "0px 0px -100px 0px",
   });
 
   const words = paragraph.split(" ");
@@ -24,11 +21,7 @@ export default function ScrollRevealParagraph({
         const delay = i * 0.03;
 
         return (
-          <Word
-            key={`word-${i}-${word.slice(0, KEY_PREFIX_LENGTH)}`}
-            delay={delay}
-            isInView={isInView}
-          >
+          <Word key={`word-${i}-${word.slice(0, KEY_PREFIX_LENGTH)}`} delay={delay} isInView={isInView}>
             {word}
           </Word>
         );
@@ -44,12 +37,12 @@ const Word = ({ children, delay, isInView }) => {
         initial={{ opacity: 0.2, y: 10 }}
         animate={{
           opacity: isInView ? 1 : 0.2,
-          y: isInView ? 0 : 10
+          y: isInView ? 0 : 10,
         }}
         transition={{
           duration: 0.5,
           delay: isInView ? delay : 0,
-          ease: "easeOut"
+          ease: "easeOut",
         }}
         className="inline-block"
       >

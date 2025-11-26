@@ -1,7 +1,8 @@
 @import "tailwindcss";
-
 @import "./customUtility.css";
+@import "./utility.css";
 @import "./shadcdnTheem.css";
+@import "./swiper.css";
 
 @custom-variant dark (&:is(.dark *));
 @plugin "daisyui";
