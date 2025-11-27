@@ -22,7 +22,7 @@ const Experience = () => {
     },
   ];
   return (
-    <section className="w-full text-white py-16">
+    <section className="  text-white py-16">
       {/* Section Title */}
       <div className="font-bold mb-12 ">
         {/* Tag / Label */}
@@ -51,19 +51,19 @@ const Experience = () => {
             <h3 className="text-gray-400 text-lg font-medium">{item.company}</h3>
 
             {/* Role */}
-            <p className="text-2xl font-semibold mt-1 text-white">{item.role}</p>
+            <p className="text-2xl font-semibold mt-1 text-white group-hover:text-chart-1">{item.role}</p>
 
             {/* Date Tag (Right side, Glass style) */}
             <span
               className="
           absolute right-0 top-1/2 -translate-y-1/2
-          bg-[rgba(30,30,30,0.45)] backdrop-blur-xl
+          bg-[rgba(30,30,30,0.45)] backdrop-blur-xl group-hover:bg-chart-1
           border border-border
           px-5 py-2 rounded-full
           text-sm text-gray-300
           shadow-[0_4px_15px_rgba(0,0,0,0.25)]
           transition-all duration-300
-          group-hover:border-amber-500 group-hover:shadow-lg
+          group-hover:border-chart-1 group-hover:shadow-lg
         "
             >
               {item.date}

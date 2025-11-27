@@ -28,7 +28,7 @@ const Intro = () => {
     : "";
 
   return (
-    <section className="min-h-screen flex flex-col px-6 md:p-16  text-white">
+    <section className="min-h-screen max-w-5xl flex flex-col px-6 md:p-16  text-white">
       {/* Location and time */}
       <p className="text-sm font-medium text-gray-200 mb-2">Dhaka Bangladesh{formattedTime && `, ${formattedTime}`}</p>
 

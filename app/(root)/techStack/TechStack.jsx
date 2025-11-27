@@ -1,60 +1,58 @@
-import Image from "next/image";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-import { skills } from "@/lib/skills";
+import Swip from "./Swip";
+import SectionTitle from "@/components/sectionTitle/SectionTitle";
 
 const TechStack = () => {
   return (
-    <div className="min-h-screen flex flex-col px-6 md:px-16 text-white">
+    <div className="min-h-screen max-w-5xl flex flex-col px-6 md:px-16 text-white">
       <h1 className="text-5xl text-secondary font-bold mb-10">Tech Stack</h1>
+      <div className="">
+        <Swip />
+      </div>
+      <div className="flex mt-24">
+        <div className="w-2/12">
+          <SectionTitle params="About Me" />
+        </div>
+        <div className="w-10/12">
+          <h1 className="text-5xl">Great development starts with a clear purpose.</h1>
+          <p className="mt-16">A deep understanding of business goals, user needs, and technical direction guides every stage of development. When these elements align, decisions become clearer, solutions become smarter, and the final product delivers real, lasting value. This clarity ensures that every feature we build serves a purpose and contributes meaningfully to the overall product vision.</p>
 
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        loop={true}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="w-full max-w-7xl mx-auto py-12"
-      >
-        {skills.map((item) => (
-          <SwiperSlide key={item.id} className="!w-80">
-            <div
-              className="flex flex-col items-center space-y-4 rounded-xl p-8 glassyBg text-white
-              transition-all duration-300 cursor-pointer
-              hover:bg-[rgba(40,40,40,0.45)]
-              hover:shadow-[0_10px_25px_rgba(0,0,0,0.45),inset_0_0_25px_rgba(255,255,255,0.06)]
-              hover:scale-[1.04]
-              backdrop-blur-xl border border-white/10
-              h-72"
-            >
-              <div className="flex items-center justify-center w-32 h-32 bg-black rounded-xl">
-                <Image src={item.logo} alt={item.name} width={80} height={80} className="opacity-90 w-20 h-20 object-contain" />
-              </div>
-              <p className="text-center text-2xl font-semibold">{item.name}</p>
-              <p className="text-center text-sm text-gray-400">{item.proficiency}</p>
+          <div className=" mt-10 space-y-4 ml-4 ">
+            <div className="flex gap-4 hover:text-chart-1">
+              <li>Clean code</li>
+              <h4>Love writing clean, maintainable code</h4>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            <div className="flex gap-4 hover:text-chart-1">
+              <li>Problem-solving</li>
+              <h4>Strong problem-solving and debugging skills</h4>
+            </div>
+            <div className="flex gap-4 hover:text-chart-1">
+              <li>UI/UX awareness</li>
+              <h4>Always learning new technologies</h4>
+            </div>
+            <div className="flex gap-4 hover:text-chart-1">
+              <li>Fast learner</li>
+              <h4>Can work under pressure</h4>
+            </div>
+            <div className="flex gap-4 hover:text-chart-1">
+              <li>Team collaboration</li>
+              <h4>collaborates effectively with others</h4>
+            </div>
+          </div>
+          <div className="mt-10 text-2xl space-y-5">
+            <h3>Technologies I am Comfortable With</h3>
+            <div className="flex flex-wrap gap-3">
+              {["React.js", "Next.js", "Tailwind CSS", "Gsap", "Node.js", "Express.js", "MongoDB", "MySQL", "Firebase", "GitHub"]
+                .sort((a, b) => a.localeCompare(b))
+                .map((tag) => (
+                  <span key={tag} className="px-4 py-2 rounded-full glassyBg text-gray-200 text-sm hover:bg-secondary hover:text-accent-foreground transition">
+                    {tag}
+                  </span>
+                ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
