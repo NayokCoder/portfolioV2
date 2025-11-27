@@ -22,19 +22,19 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
+      const interval = setInterval(handleNext, 15000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, active]);
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
 
   return (
-    <div className={cn("mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12", className)}>
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
-        <div className="flex flex-col justify-between py-4">
+    <div className={cn("mx-auto max-w-sm px-4  font-sans antialiased md:max-w-4xl md:px-8 lg:px-12", className)}>
+      <div className="relative grid grid-cols-1 gap-20 ">
+        <div className="flex flex-col w-full  justify-between py-4">
           <motion.div
             key={active}
             initial={{
@@ -54,9 +54,10 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-5xl font-bold text-secondary dark:text-white">{testimonials[active].name}</h3>
+            <h3 className="text-3xl font-bold text-secondary dark:text-white"> {testimonials[active].name}</h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500 mt-5">{testimonials[active].designation}</p>
-            <motion.p className="mt-8 text-xl text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-8 text-5xl text-gray-500 dark:text-neutral-300">
+              "
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -80,23 +81,24 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
                   {word}&nbsp;
                 </motion.span>
               ))}
+              "
             </motion.p>
           </motion.div>
 
           <div className="mt-10">
             <div className="flex gap-4 pt-12 md:pt-0">
-              <button onClick={handlePrev} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
-                <ChevronLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <button onClick={handlePrev} className="group/button flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
+                <ChevronLeft className="h-7 w-7 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
               </button>
-              <button onClick={handleNext} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
-                <ChevronRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <button onClick={handleNext} className="group/button flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
+                <ChevronRight className="h-7 w-7 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
               </button>
             </div>
           </div>
         </div>
       </div>
       <div className="flex justify-end px-6">
-        <div className="relative h-80 w-80 py-10">
+        <div className="relative h-96 w-80 py-10">
           <AnimatePresence>
             {testimonials.map((testimonial, index) => (
               <motion.div
