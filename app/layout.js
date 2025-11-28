@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative flex flex-col lg:flex-row max-w-[1920px] mx-auto px-4 lg:px-6 xl:px-12 gap-6 justify-between h-screen overflow-hidden`}>
         {/* Background Video */}
         <video className="fixed top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted playsInline preload="auto">
-          <source src="/asset/Bg-Video/bg-animation.webm" type="video/webm" />
+          <source src="/asset/Bg-Video/video5.mp4" type="video/mp4" />
         </video>
 
         {/* Drawer */}
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
 
         {/* Gradient Box */}
         <div className="flex items-center justify-center">
-          <div className="w-full h-96 lg:w-80 xl:w-96 lg:h-[550px] xl:h-[750px] bg-linear-to-r from-purple-400 via-pink-500 to-red-500 animate-gradient-x rounded-2xl" />
+          <div className="w-full h-96 lg:w-80 xl:w-96 lg:h-[550px] xl:h-[750px] glassyBg rounded-2xl" />
         </div>
 
         {children}
