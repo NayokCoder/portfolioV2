@@ -10,7 +10,7 @@ export default function Drawer() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div variant="outline" className="w-12 h-12 bg-secondary-foreground text-secondary rounded-full flex items-center justify-center">
+        <div variant="outline" className="w-12 h-12 bg-secondary text-foreground rounded-full flex items-center justify-center">
           <LucideLayoutDashboard />
         </div>
       </SheetTrigger>
