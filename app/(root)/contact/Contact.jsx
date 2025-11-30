@@ -1,10 +1,10 @@
 "use client";
 
-import StartedButton from "@/components/layout/startedButton/StartedButton";
 import AnimatedInput from "@/components/ui/animated-input";
 import { Book, Mail, MessageSquare, User } from "lucide-react";
 import { useState } from "react";
 import BookMarquee from "./BookMarquee";
+import StartedButton from "@/components/startedButton/StartedButton";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -22,9 +22,9 @@ const Contact = () => {
 
   return (
     <div className="">
-      <section className="min-h-screen glassyBg rounded-3xl max-w-5xl flex flex-col px-6 md:p-16  ">
+      <section className=" glassyBg rounded-3xl max-w-4xl flex flex-col c-padding ">
         <div className="text-white">
-          <h1 className="text-8xl">
+          <h1 className="text-6xl">
             Contact Fro <br />
             Work
           </h1>

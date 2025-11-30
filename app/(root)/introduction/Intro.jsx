@@ -31,7 +31,14 @@ const Intro = () => {
   return (
     <section className="min-h-screen max-w-4xl flex flex-col px-6 md:p-16  text-white">
       {/* Location and time */}
-      <p className="text-normal font-medium text-secondary ">Dhaka Bangladesh{formattedTime && `, ${formattedTime}`}</p>
+      <p className="text-normal font-medium text-secondary">
+        Dhaka Bangladesh
+        {formattedTime && (
+          <>
+            , <span className="text-chart-1">{formattedTime}</span>
+          </>
+        )}
+      </p>
 
       <section className="py-12">
         {/* Section title */}
