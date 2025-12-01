@@ -1,6 +1,7 @@
 import { Rajdhani } from "next/font/google";
 import "../css/globals.css";
 import Drawer from "@/components/layout/drawer/Drawer";
+import Sidebar from "@/components/layout/sidebar/Sidebar";
 
 const geistMono = Rajdhani({
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
 
         {/* Gradient Box */}
         <div className="flex items-center justify-center">
-          <div className="w-full h-96 lg:w-80 xl:w-96 lg:h-[550px] xl:h-[750px] glassyBg rounded-2xl" />
+          <div className="w-full h-96 lg:w-80 xl:w-96 lg:h-[550px] xl:h-[750px] glassyBg rounded-2xl">
+            <Sidebar />
+          </div>
         </div>
 
         {children}
