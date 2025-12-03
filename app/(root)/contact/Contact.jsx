@@ -10,15 +10,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [yourPhone, setyourPhone] = useState("");
   const [massage, setMassage] = useState("");
-  const classValue = [
-    {
-      width: "w-72",
-      minWidth: "min-w-72",
-    },
-    {
-      bgColour: "bg-secondary",
-    },
-  ];
+  const classValue = [{ width: "w-60", minWidth: "min-w-60" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
     <div className="">
