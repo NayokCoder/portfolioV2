@@ -4,6 +4,11 @@ import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import ScrollRevealParagraph from "@/components/ui/ScrollRevealParagraph";
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
 import React from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
   const experiences = [
@@ -23,8 +28,44 @@ const Experience = () => {
       date: "2020 - 2021",
     },
   ];
+
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    const box = boxRef.current;
+    if (!box) return;
+
+    // Find the custom scroll container (ScrollArea viewport)
+    const scrollContainer = box.closest("[data-radix-scroll-area-viewport]");
+    if (!scrollContainer) return;
+
+    // Create ScrollTrigger animation
+    const animation = gsap.fromTo(
+      box,
+      { x: -60, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: "sine.in",
+        scrollTrigger: {
+          trigger: box,
+          start: "top 95%",
+          end: "top 50%",
+          scroller: scrollContainer,
+          scrub: 2,
+        },
+      }
+    );
+
+    setTimeout(() => ScrollTrigger.refresh(), 100);
+
+    return () => {
+      animation.scrollTrigger?.kill();
+      animation.kill();
+    };
+  }, []);
   return (
-    <section className="  text-white mt-12">
+    <section className="text-white mt-12">
       {/* Section Title */}
       <div className="font-bold  space-y-12 mb-12 ">
         <SectionTitle params="Experience" />
@@ -35,7 +76,7 @@ const Experience = () => {
       </div>
 
       {/* Experience List */}
-      <div className="space-y-12">
+      <div ref={boxRef} className="space-y-12">
         {experiences.map((item, idx) => (
           <div
             key={idx}
