@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Experience from "./Experience";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import RevealText from "@/components/ui/RevealText";
+import Heading from "@/components/layout/Heading";
 
 const Intro = () => {
   const [time, setTime] = useState(null);
@@ -49,7 +50,7 @@ const Intro = () => {
 
         <div className="space-y-7 mt-12">
           <RevealText delay={0} direction="up">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight ">Professional web developer focused On your project success.</h1>
+            <Heading>Professional web developer focused On your project success.</Heading>
           </RevealText>
 
           <RevealText delay={0} direction="left">

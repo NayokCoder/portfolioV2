@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ScrollRevealText from "../../ScrollRevealText";
 
 export const AnimatedTestimonials = ({ testimonials, autoplay = false, className }) => {
   const [active, setActive] = useState(0);

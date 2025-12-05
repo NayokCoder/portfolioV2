@@ -1,6 +1,8 @@
 import React from "react";
 import Swip from "./Swip";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
+import Heading from "@/components/layout/Heading";
+import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
 const About = () => {
   return (
@@ -10,7 +12,11 @@ const About = () => {
           <SectionTitle params="About Me" />
         </div>
         <div className="w-10/12">
-          <h1 className="text-5xl">Great development starts with a clear purpose.</h1>
+          <ScrollRevealText>
+            {" "}
+            <Heading>Great development starts with a clear purpose.</Heading>
+          </ScrollRevealText>
+
           <p className="mt-12 text-normal text-muted-foreground hover:text-chart-1">A deep understanding of business goals, user needs, and technical direction guides every stage of development. When these elements align, decisions become clearer, solutions become smarter, and the final product delivers real, lasting value. This clarity ensures that every feature we build serves a purpose and contributes meaningfully to the overall product vision.</p>
 
           <div className=" mt-12 space-y-4 ml-4 ">

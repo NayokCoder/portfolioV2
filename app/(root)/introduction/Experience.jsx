@@ -1,6 +1,8 @@
 "use client";
+import Heading from "@/components/layout/Heading";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import ScrollRevealParagraph from "@/components/ui/ScrollRevealParagraph";
+import ScrollRevealText from "@/components/ui/ScrollRevealText";
 import React from "react";
 
 const Experience = () => {
@@ -26,7 +28,10 @@ const Experience = () => {
       {/* Section Title */}
       <div className="font-bold  space-y-12 mb-12 ">
         <SectionTitle params="Experience" />
-        <ScrollRevealParagraph paragraph="I will offer more than just a place to live; it’s a space designed to reflect your unique style and inspiration." className="text-4xl sm:text-5xl leading-snug text-white font-bold" />
+        {/* <ScrollRevealParagraph /> */}
+        <ScrollRevealText>
+          <Heading>I will offer more than just a place to live; it's a space designed to reflect your unique style and inspiration.</Heading>
+        </ScrollRevealText>
       </div>
 
       {/* Experience List */}

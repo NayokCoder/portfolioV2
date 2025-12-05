@@ -2,7 +2,6 @@ import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 const StartedButton = ({ params }) => {
-  console.log(params[0].width);
   return (
     <div>
       <div className="flex px-6 group">

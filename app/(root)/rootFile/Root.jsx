@@ -18,7 +18,7 @@ const Root = () => {
 
     const smoothScroll = () => {
       const diff = scrollTarget - currentScroll;
-      const delta = diff * 0.03; // Smoothing factor (0.1 = smooth, 0.3 = faster)
+      const delta = diff * 0.1; // Smoothing factor (0.1 = smooth, 0.3 = faster)
 
       if (Math.abs(diff) > 0.1) {
         currentScroll += delta;
