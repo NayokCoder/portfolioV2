@@ -1,7 +1,7 @@
 @layer components {
   .glassyBg {
-    @apply bg-[rgba(30,30,30,0.35)]   backdrop-blur-xl border border-[rgba(255,255,255,0.08)]
-          shadow-[0_4px_20px_rgba(0,0,0,0.3),inset_0_0_30px_rgba(255,255,255,0.05)];
+    @apply bg-[rgba(40,40,40,0.6)]   backdrop-blur-xl border border-[rgba(255,255,255,0.08)]
+          shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)];
   }
 }
 @layer utilities {

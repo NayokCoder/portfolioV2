@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import Experience from "./Experience";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import RevealText from "@/components/ui/RevealText";
-import Heading from "@/components/layout/Heading";
+import Heading from "@/components/Heading";
+import PainFreeText from "@/components/ui/PainFreeText";
 
 const Intro = () => {
   const [time, setTime] = useState(null);
@@ -58,10 +59,13 @@ const Intro = () => {
             <p className="text-muted-foreground text-normal font-medium  ">&quot;I am a passionate MERN Stack Developer with hands-on experience in building full-stack applications. Skilled in JavaScript, React, Node.js, Express.js, and database design using MySQL and MongoDB. I love solving problems, learning new technologies, and developing solutions that make a real impact.&quot;</p>
           </RevealText>
 
-          <RevealText delay={0} direction="right">
-            {/* Subheading */}
+          <PainFreeText>
+            <Heading>Professional web developer focused On your project success.</Heading>
+          </PainFreeText>
+
+          {/* <RevealText delay={0} direction="right">
             <p className="text-muted-foreground text-sm ">হ্যালো, আমি মোঃ ফেরদৌস আলম । ছোটবেলা থেকেই টেকনোলজির প্রতি ভীষণ আগ্রহ ছিল। কোডিংয়ের মাধ্যমে সমস্যা সমাধান করতে আর নতুন কিছু তৈরি করতে ভীষণ ভালো লাগে। বর্তমানে আমি একজন মার্ন-স্ট্যাক ডেভেলপার হিসেবে কাজ করছি। ফ্রন্টএন্ডে রিয়েক্ট/নেক্সট এবং ব্যাকএন্ডে নোড, এক্সপ্রেস, ও ডাটাবেস (মাই-এসকিঊ-এল/মংগডিবি) ব্যবহার করি। আমার লক্ষ্য হচ্ছে এমন অ্যাপ্লিকেশন তৈরি করা, যা ব্যবহারকারীদের জীবনকে সহজ এবং কার্যকর করে তুলবে।</p>
-          </RevealText>
+          </RevealText> */}
         </div>
 
         <RevealText delay={0} direction="left">

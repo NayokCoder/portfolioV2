@@ -1,7 +1,7 @@
 import React from "react";
 import Swip from "./Swip";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
-import Heading from "@/components/layout/Heading";
+import Heading from "@/components/Heading";
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
 const About = () => {
