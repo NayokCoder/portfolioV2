@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Award, GraduationCap, Calendar, ArrowUpRight } from "lucide-react";
 import StartedButton from "@/components/startedButton/StartedButton";
+import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
 
 const Education = () => {
   const containerVariants = {
@@ -32,7 +33,9 @@ const Education = () => {
       <div className="space-y-6">
         {/* Section Header */}
         <motion.div variants={itemVariants} className="space-y-3">
-          <h2 className="text-5xl font-semibold tracking-tight">Education & Certifications</h2>
+          <GsapleftAnimation>
+            <h2 className="text-5xl font-semibold tracking-tight">Education & Certifications</h2>
+          </GsapleftAnimation>
           <p className="text-muted-foreground text-xl">My academic journey and professional development</p>
         </motion.div>
 

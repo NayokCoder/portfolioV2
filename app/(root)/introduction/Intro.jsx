@@ -6,7 +6,7 @@ import Experience from "./Experience";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import RevealText from "@/components/ui/RevealText";
 import Heading from "@/components/Heading";
-import PainFreeText from "@/components/ui/PainFreeText";
+import RevealHeading from "./RevealHeading";
 
 const Intro = () => {
   const [time, setTime] = useState(null);
@@ -49,19 +49,17 @@ const Intro = () => {
 
         {/* Headline */}
 
-        <div className="space-y-7 mt-12">
+        <div className="space-y-7 mt-16">
           <RevealText delay={0} direction="up">
-            <Heading>Professional web developer focused On your project success.</Heading>
+            <RevealHeading>
+              <Heading>Professional web developer focused On your project success.</Heading>
+            </RevealHeading>
           </RevealText>
 
           <RevealText delay={0} direction="left">
             {/* Subheading */}
             <p className="text-muted-foreground text-normal font-medium  ">&quot;I am a passionate MERN Stack Developer with hands-on experience in building full-stack applications. Skilled in JavaScript, React, Node.js, Express.js, and database design using MySQL and MongoDB. I love solving problems, learning new technologies, and developing solutions that make a real impact.&quot;</p>
           </RevealText>
-
-          <PainFreeText>
-            <Heading>Professional web developer focused On your project success.</Heading>
-          </PainFreeText>
 
           {/* <RevealText delay={0} direction="right">
             <p className="text-muted-foreground text-sm ">হ্যালো, আমি মোঃ ফেরদৌস আলম । ছোটবেলা থেকেই টেকনোলজির প্রতি ভীষণ আগ্রহ ছিল। কোডিংয়ের মাধ্যমে সমস্যা সমাধান করতে আর নতুন কিছু তৈরি করতে ভীষণ ভালো লাগে। বর্তমানে আমি একজন মার্ন-স্ট্যাক ডেভেলপার হিসেবে কাজ করছি। ফ্রন্টএন্ডে রিয়েক্ট/নেক্সট এবং ব্যাকএন্ডে নোড, এক্সপ্রেস, ও ডাটাবেস (মাই-এসকিঊ-এল/মংগডিবি) ব্যবহার করি। আমার লক্ষ্য হচ্ছে এমন অ্যাপ্লিকেশন তৈরি করা, যা ব্যবহারকারীদের জীবনকে সহজ এবং কার্যকর করে তুলবে।</p>
@@ -70,7 +68,7 @@ const Intro = () => {
 
         <RevealText delay={0} direction="left">
           {/* Tags */}
-          <div className="flex flex-wrap gap-3 mt-8">
+          <div className="flex flex-wrap gap-3 mt-20">
             {["Branding", "Art Direction", "UI Design", "Webflow Development"].map((tag) => (
               <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
                 {tag}
@@ -81,18 +79,18 @@ const Intro = () => {
 
         <RevealText delay={0} direction="down">
           <div className="flex flex-col md:flex-row gap-4 mt-12">
-            <div className="rounded-xl mt-8 max-w-xs glassyBg text-white p-6 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
-              <p className="text-sm text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
-              <div className="flex justify-end items-center gap-2">
-                <CountingNumber from={0} to={98} duration={3} className="text-5xl font-extrabold drop-shadow-lg" />
-                <span className="text-3xl font-semibold opacity-90">%</span>
+            <div className="rounded-xl mt-8 w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+              <p className="text-lg text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
+              <div className="flex justify-end items-center gap-2 mt-12">
+                <CountingNumber from={0} to={98} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />
+                <span className="text-6xl font-semibold opacity-90">%</span>
               </div>
             </div>
-            <div className="rounded-xl mt-8 max-w-xs glassyBg text-white p-6 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
-              <p className="text-sm text-gray-200 font-medium mb-4">• Projects completed successfully</p>
-              <div className="flex justify-end items-center gap-2">
-                <CountingNumber from={0} to={50} duration={3} className="text-5xl font-extrabold drop-shadow-lg" />
-                <span className="text-3xl font-semibold opacity-90">+</span>
+            <div className="rounded-xl mt-8 w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+              <p className="text-lg text-gray-200 font-medium mb-4">• Projects completed successfully</p>
+              <div className="flex justify-end items-center gap-2 mt-12">
+                <CountingNumber from={0} to={50} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />
+                <span className="text-6xl font-semibold opacity-90">+</span>
               </div>
             </div>
           </div>

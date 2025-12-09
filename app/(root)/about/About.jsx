@@ -4,6 +4,8 @@ import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import Heading from "@/components/Heading";
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
+import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
+
 const About = () => {
   return (
     <div className="min-h-screen max-w-4xl flex flex-col px-6 md:px-16 text-white">
@@ -55,7 +57,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-5xl text-secondary font-semibold my-12">Tech Stack</h1>
+
+      <div className="my-20">
+        <GsapleftAnimation>
+          <Heading>Tech Stack</Heading>
+        </GsapleftAnimation>
+      </div>
+
       <div className="">
         <Swip />
       </div>

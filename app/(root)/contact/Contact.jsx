@@ -5,6 +5,7 @@ import { Book, Mail, MessageSquare, User } from "lucide-react";
 import { useState } from "react";
 import BookMarquee from "./BookMarquee";
 import StartedButton from "@/components/startedButton/StartedButton";
+import GsapUpAnimation from "@/components/ui/GsapUpAnimation";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -16,10 +17,12 @@ const Contact = () => {
     <div className="">
       <section className=" glassyBg rounded-3xl max-w-4xl flex flex-col c-padding ">
         <div className="text-white">
-          <h1 className="text-6xl">
-            Contact Fro <br />
-            Work
-          </h1>
+          <GsapUpAnimation delay={0} direction="up">
+            <h1 className="text-6xl">
+              Contact Fro <br />
+              Work
+            </h1>
+          </GsapUpAnimation>
         </div>
         <div className=" max-w-full mt-20 space-y-6 p-6 mb-10">
           <div className="space-y-12 ">

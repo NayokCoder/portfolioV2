@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
+import GsapDownAnimation from "../GsapDownAnimation";
 
 const EASE_IN_OUT_CUBIC_X1 = 0.4;
 const EASE_IN_OUT_CUBIC_Y1 = 0;
@@ -43,6 +44,7 @@ export default function AnimatedInput({ value, defaultValue = "", onChange, labe
         type="text"
         value={val}
       />
+
       <motion.label
         animate={
           isFloating
