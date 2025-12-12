@@ -15,18 +15,31 @@ const Root = () => {
     let scrollTarget = viewport.scrollTop;
     let currentScroll = viewport.scrollTop;
     let rafId = null;
+    let lastScrollTop = viewport.scrollTop;
 
     const smoothScroll = () => {
+      // Check if scrollTop was changed programmatically (by Scrollspy)
+      if (Math.abs(viewport.scrollTop - lastScrollTop) > 1 && Math.abs(viewport.scrollTop - currentScroll) > 10) {
+        // Sync with programmatic scroll
+        scrollTarget = viewport.scrollTop;
+        currentScroll = viewport.scrollTop;
+        lastScrollTop = viewport.scrollTop;
+        rafId = null;
+        return;
+      }
+
       const diff = scrollTarget - currentScroll;
       const delta = diff * 0.2; // Smoothing factor (0.1 = smooth, 0.3 = faster)
 
       if (Math.abs(diff) > 0.1) {
         currentScroll += delta;
         viewport.scrollTop = currentScroll;
+        lastScrollTop = currentScroll;
         rafId = requestAnimationFrame(smoothScroll);
       } else {
         currentScroll = scrollTarget;
         viewport.scrollTop = currentScroll;
+        lastScrollTop = currentScroll;
         rafId = null;
       }
     };
@@ -62,14 +75,25 @@ const Root = () => {
       }
     };
 
+    const handleScroll = () => {
+      // Detect programmatic scroll changes
+      if (Math.abs(viewport.scrollTop - currentScroll) > 10 && !rafId) {
+        scrollTarget = viewport.scrollTop;
+        currentScroll = viewport.scrollTop;
+        lastScrollTop = viewport.scrollTop;
+      }
+    };
+
     viewport.addEventListener("wheel", handleWheel, { passive: false });
     viewport.addEventListener("touchstart", handleTouchStart, { passive: true });
     viewport.addEventListener("touchmove", handleTouchMove, { passive: false });
+    viewport.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       viewport.removeEventListener("wheel", handleWheel);
       viewport.removeEventListener("touchstart", handleTouchStart);
       viewport.removeEventListener("touchmove", handleTouchMove);
+      viewport.removeEventListener("scroll", handleScroll);
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);

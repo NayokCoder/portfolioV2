@@ -2,6 +2,7 @@ import { Rajdhani } from "next/font/google";
 import "../css/globals.css";
 import Drawer from "@/components/layout/drawer/Drawer";
 import Sidebar from "@/components/layout/sidebar/Sidebar";
+import SmoothDrawer from "@/components/kokonutui/smooth-drawer";
 
 const geistMono = Rajdhani({
   subsets: ["latin"],
@@ -13,6 +14,9 @@ const geistMono = Rajdhani({
 export const metadata = {
   title: "Ferdous Alam - Portfolio",
   description: "Ferdous Alam's Portfolio showcasing projects, skills, and experience in web development and design.",
+  icons: {
+    icon: "/asset/align-left-svgrepo-com (1).svg",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -25,8 +29,9 @@ export default function RootLayout({ children }) {
         </video>
 
         {/* Drawer */}
-        <div className="z-50 absolute right-1/32 top-1/20">
-          <Drawer />
+        <div className="z-50 absolute right-1/40 top-1/20">
+          <SmoothDrawer />
+          {/* <Drawer /> */}
         </div>
 
         {/* Gradient Box */}

@@ -6,6 +6,7 @@ export function Scrollspy({ children, targetRef, onUpdate, className, offset = 0
   const selfRef = useRef(null);
   const anchorElementsRef = useRef(null);
   const prevIdTracker = useRef(null);
+  const isScrollingProgrammatically = useRef(false);
 
   // Sets active nav, hash, prevIdTracker, and calls onUpdate
   const setActiveSection = useCallback(
@@ -30,6 +31,7 @@ export function Scrollspy({ children, targetRef, onUpdate, className, offset = 0
 
   const handleScroll = useCallback(() => {
     if (!anchorElementsRef.current || anchorElementsRef.current.length === 0) return;
+    if (isScrollingProgrammatically.current) return;
     const scrollElement = targetRef?.current === document ? window : targetRef?.current;
     const scrollTop = scrollElement === window ? window.scrollY || document.documentElement.scrollTop : scrollElement.scrollTop;
 
@@ -89,6 +91,9 @@ export function Scrollspy({ children, targetRef, onUpdate, className, offset = 0
 
       const scrollTop = sectionElement.offsetTop - customOffset;
 
+      // Set flag to prevent handleScroll from interfering
+      isScrollingProgrammatically.current = true;
+
       if (scrollToElement && "scrollTo" in scrollToElement) {
         scrollToElement.scrollTo({
           top: scrollTop,
@@ -97,6 +102,11 @@ export function Scrollspy({ children, targetRef, onUpdate, className, offset = 0
         });
       }
       setActiveSection(sectionId, true);
+
+      // Re-enable scroll tracking after smooth scroll completes
+      setTimeout(() => {
+        isScrollingProgrammatically.current = false;
+      }, smooth ? 1000 : 0);
     },
     [dataAttribute, offset, smooth, targetRef, setActiveSection]
   );
