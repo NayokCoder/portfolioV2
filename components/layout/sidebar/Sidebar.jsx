@@ -35,8 +35,8 @@ const Sidebar = () => {
   const classValue = [{ width: "w-full lg:w-64 xl:w-72", minWidth: "" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
-    <div className="flex justify-center">
-      <div className="w-full max-w-2xl rounded-2xl glassyBg">
+    <div className="flex justify-center py-5 xl:py-0">
+      <div className="w-full min-w-sm max-w-2xl rounded-2xl glassyBg">
         <div className="relative flex flex-col items-center gap-6 px-4 py-6 lg:px-6 lg:py-10">
           {/* Header */}
           <div className="flex w-full items-center justify-between gap-3">
@@ -54,8 +54,8 @@ const Sidebar = () => {
           {/* Profile Section */}
           <section className="flex flex-col items-center w-full gap-6">
             {/* Profile Image */}
-            <div className="w-full max-w-sm overflow-hidden rounded-xl">
-              <Image src="/asset/unnamed.jpg" alt="Profile" width={350} height={350} className="w-full h-auto object-cover" />
+            <div className="w-full max-w-sm overflow-hidden rounded-xl p-6 xl:p-0">
+              <Image src="/asset/unnamed.jpg" alt="Profile" width={350} height={350} className="w-full h-auto object-cover rounded-lg" />
             </div>
 
             {/* Signature Overlay */}

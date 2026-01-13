@@ -32,7 +32,7 @@ const Intro = () => {
     : "";
 
   return (
-    <section className="min-h-screen max-w-4xl flex flex-col px-6 md:p-16  text-white">
+    <section className="min-h-screen max-w-4xl flex flex-col    text-white">
       {/* Location and time */}
       <p className="text-normal font-medium text-secondary">
         Dhaka Bangladesh

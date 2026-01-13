@@ -8,12 +8,12 @@ import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
 
 const About = () => {
   return (
-    <div className="min-h-screen max-w-4xl flex flex-col px-6 md:px-16 text-white">
-      <div className="flex mt-12">
-        <div className="w-2/12">
-          <SectionTitle params="About Me" />
-        </div>
-        <div className="w-10/12">
+    <div className="min-h-screen max-w-4xl flex flex-col text-white">
+      <div className="w-2/12">
+        <SectionTitle params="About Me" />
+      </div>
+      <div className=" mt-12">
+        <div className="">
           <ScrollRevealText>
             {" "}
             <Heading>Great development starts with a clear purpose.</Heading>
