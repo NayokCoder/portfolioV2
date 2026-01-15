@@ -13,7 +13,7 @@ const Content = () => {
       <Intro />
       <About />
       <Course />
-      {/* <Project /> */}
+      <Project />
       <Testimonial />
       <Contact />
       <Blog />

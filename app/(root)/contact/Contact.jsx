@@ -14,11 +14,11 @@ const Contact = () => {
   const classValue = [{ width: "w-60", minWidth: "min-w-60" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
-    <div className="">
-      <section className=" glassyBg rounded-3xl max-w-4xl flex flex-col c-padding ">
+    <div className=" mt-6">
+      <section className=" glassyBg rounded-3xl max-w-4xl flex flex-col c-padding py-8  md:py-0 ">
         <div className="text-white">
           <GsapUpAnimation delay={0} direction="up">
-            <h1 className="text-6xl">
+            <h1 className="text-6xl px-6 md:px-0">
               Contact Fro <br />
               Work
             </h1>

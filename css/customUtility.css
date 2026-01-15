@@ -6,6 +6,6 @@
 }
 @layer utilities {
   .c-padding {
-    @apply px-6 md:p-16;
+    @apply px-0 md:p-16;
   }
 }

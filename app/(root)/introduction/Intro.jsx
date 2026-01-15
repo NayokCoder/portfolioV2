@@ -34,7 +34,7 @@ const Intro = () => {
   return (
     <section className="min-h-screen max-w-4xl flex flex-col    text-white">
       {/* Location and time */}
-      <p className="text-normal font-medium text-secondary">
+      <p className="text-normal text-center lg:text-start  font-medium text-secondary">
         Dhaka Bangladesh
         {formattedTime && (
           <>
@@ -43,13 +43,13 @@ const Intro = () => {
         )}
       </p>
 
-      <section className="py-12">
+      <section className="py-6 md:py-8 lg:py-12">
         {/* Section title */}
         <SectionTitle params="Introduction" />
 
         {/* Headline */}
 
-        <div className="space-y-7 mt-16">
+        <div className="space-y-4 md:space-y-6 lg:space-y-7  mt-5 md:mt-10 lg:mt-16">
           <RevealText delay={0} direction="up">
             <RevealHeading>
               <Heading>Professional web developer focused On your project success.</Heading>
@@ -68,7 +68,7 @@ const Intro = () => {
 
         <RevealText delay={0} direction="left">
           {/* Tags */}
-          <div className="flex flex-wrap gap-3 mt-20">
+          <div className="flex flex-wrap gap-3  mt-5 md:mt-10 lg:mt-16">
             {["Branding", "Art Direction", "UI Design", "Webflow Development"].map((tag) => (
               <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
                 {tag}
@@ -78,15 +78,15 @@ const Intro = () => {
         </RevealText>
 
         <RevealText delay={0} direction="down">
-          <div className="flex flex-col md:flex-row gap-4 mt-12">
-            <div className="rounded-xl mt-8 w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-8 lg:mt-12 ">
+            <div className="rounded-xl  w-96 md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
               <p className="text-lg text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
               <div className="flex justify-end items-center gap-2 mt-12">
                 <CountingNumber from={0} to={98} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />
                 <span className="text-6xl font-semibold opacity-90">%</span>
               </div>
             </div>
-            <div className="rounded-xl mt-8 w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+            <div className="rounded-xl  w-96 md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
               <p className="text-lg text-gray-200 font-medium mb-4">• Projects completed successfully</p>
               <div className="flex justify-end items-center gap-2 mt-12">
                 <CountingNumber from={0} to={50} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />

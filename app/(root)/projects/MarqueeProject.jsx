@@ -13,7 +13,7 @@ const MarqueeProject = () => {
 
   return (
     <div className="w-full flex items-center justify-center mt-12">
-      <div className="max-w-4xl px-6 md:p-16">
+      <div className="w-full md:max-w-3xl  ">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="relative overflow-hidden rounded-3xl " onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
           {/* Animated Progress Bar */}
           <div className="absolute top-0 left-0 w-full h-1.5  overflow-hidden">
