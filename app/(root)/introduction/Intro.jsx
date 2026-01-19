@@ -32,7 +32,7 @@ const Intro = () => {
     : "";
 
   return (
-    <section className="min-h-screen max-w-4xl flex flex-col    text-white">
+    <section className="min-h-screen max-w-3xl flex flex-col    text-white">
       {/* Location and time */}
       <p className="text-normal text-center lg:text-start  font-medium text-secondary">
         Dhaka Bangladesh
@@ -77,20 +77,20 @@ const Intro = () => {
           </div>
         </RevealText>
 
-        <RevealText delay={0} direction="down">
+        <RevealText delay={0} direction="down" className="">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-8 lg:mt-12 ">
-            <div className="rounded-xl  w-96 md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+            <div className="rounded-xl w-fit  md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
               <p className="text-lg text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
               <div className="flex justify-end items-center gap-2 mt-12">
-                <CountingNumber from={0} to={98} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />
-                <span className="text-6xl font-semibold opacity-90">%</span>
+                <CountingNumber from={0} to={98} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">%</span>
               </div>
             </div>
-            <div className="rounded-xl  w-96 md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+            <div className="rounded-xl   md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
               <p className="text-lg text-gray-200 font-medium mb-4">• Projects completed successfully</p>
               <div className="flex justify-end items-center gap-2 mt-12">
-                <CountingNumber from={0} to={50} duration={3} className="text-8xl font-extrabold drop-shadow-lg" />
-                <span className="text-6xl font-semibold opacity-90">+</span>
+                <CountingNumber from={0} to={50} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">+</span>
               </div>
             </div>
           </div>

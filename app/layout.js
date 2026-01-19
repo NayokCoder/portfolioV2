@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistMono.className} bg-black relative`}>
-      <body className={`${geistMono.variable} antialiased flex flex-col xl:flex-row max-w-[1920px] mx-auto px-4 xl:px-6 justify-between gap-6 h-screen xl:overflow-hidden`}>
+      <body className={`${geistMono.variable} antialiased flex flex-col xl:flex-row max-w-[1920px] mx-auto  xl:px-6 justify-between gap-6 h-screen xl:overflow-hidden`}>
         {/* Background Video */}
         <video className="fixed top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted playsInline preload="auto">
           <source src="/asset/Bg-Video/video5.mp4" type="video/mp4" />
