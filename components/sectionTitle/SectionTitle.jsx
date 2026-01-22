@@ -2,7 +2,7 @@ import React from "react";
 
 const SectionTitle = ({ params }) => {
   return (
-    <div>
+    <div className="">
       <div className="font-bold">
         {/* Tag / Label */}
         <div className="flex items-center gap-3 text-xs ">

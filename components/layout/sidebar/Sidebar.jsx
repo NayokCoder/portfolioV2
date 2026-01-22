@@ -32,10 +32,10 @@ export function SocialSection() {
 
 const Sidebar = () => {
   const router = useRouter();
-  const classValue = [{ width: "w-full lg:w-64 xl:w-72", minWidth: "" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
+  const classValue = [{ width: "w-full  xl:w-72", minWidth: "" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
-    <div className="flex justify-center w-screen xl:w-full  px-4 md:px-10  py-5  xl:py-0">
+    <div className="flex justify-center w-screen lg:max-w-4xl xl:w-full  px-4 md:px-10  py-12  xl:py-0">
       <div className="w-full  xl:max-w-2xl rounded-2xl glassyBg">
         <div className="relative flex flex-col items-center gap-6 px-4 py-6 lg:px-6 lg:py-10">
           {/* Header */}
@@ -73,7 +73,7 @@ const Sidebar = () => {
           </section>
 
           {/* CTA */}
-          <div className="w-full cursor-pointer" onClick={() => router.push("/#contact")}>
+          <div className="w-full md:w-1/2 cursor-pointer" onClick={() => router.push("/#contact")}>
             <StartedButton params={classValue} />
           </div>
         </div>

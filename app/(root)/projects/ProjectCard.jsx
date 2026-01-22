@@ -7,7 +7,7 @@ import React from "react";
 const ProjectCard = () => {
   const work = selectedWork;
   return (
-    <div className=" rounded-3xl grid grid-cols-1 gap-6 xl:gap-10 mt-12  relative">
+    <div className=" rounded-3xl grid grid-cols-1 gap-6 xl:gap-10 mt-10  relative">
       {work.map((item) => (
         <GsapleftAnimation key={item.id}>
           <div key={item.id} className="max-w-3xl rounded-3xl flex gap-8 items-center relative">

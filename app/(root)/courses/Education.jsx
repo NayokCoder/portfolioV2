@@ -29,23 +29,23 @@ const Education = () => {
   };
 
   return (
-    <motion.div initial="hidden" animate="visible" variants={containerVariants} className="w-full mt-7 xl:mt-12">
-      <div className="space-y-6">
+    <motion.div initial="hidden" animate="visible" variants={containerVariants} className="w-full mt-10">
+      <div className="space-y-7">
         {/* Section Header */}
         <motion.div variants={itemVariants} className="space-y-3">
           <GsapleftAnimation>
-            <h2 className="c-heading font-semibold text-center xl:text-start tracking-tight">Education & Certifications</h2>
+            <h2 className="c-heading font-semibold  tracking-tight">Education & Certifications</h2>
           </GsapleftAnimation>
-          <p className="text-muted-foreground text-center xl:text-start text-xl">My academic journey and professional development</p>
+          <p className="text-muted-foreground  text-xl">My academic journey and professional development</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 xl:mt-12">
+        <div className="grid md:grid-cols-2 gap-6 space-y-10 mt-16">
           {/* Certificate Card */}
           <motion.article variants={itemVariants} whileHover={{ y: -5 }} className="group relative flex flex-col gap-4 xl:p-6 rounded-xl  shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
             {/* Gradient Background */}
-            <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0  bg-linear-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <div className="relative z-10 flex items-start justify-center xl:justify-between">
+            <div className="relative z-10 flex items-start ">
               <div className="flex items-start gap-4">
                 <motion.div whileHover={{ rotate: 12, scale: 1.1 }} className="p-3 bg-linear-to-br from-amber-500/10 to-amber-600/5 rounded-xl  shadow-sm">
                   <Award className="w-6 h-6 text-amber-600 dark:text-amber-500" />
@@ -62,10 +62,10 @@ const Education = () => {
               </div>
             </div>
 
-            <p className="relative z-10 text-normal text-center xl:text-start hover:text-chart-1 text-muted-foreground leading-relaxed">Completed a comprehensive web development program covering HTML, CSS, JavaScript, React, Node.js and deployment workflows. Built multiple projects and a portfolio-ready application.</p>
+            <p className="relative  z-10 text-normal  hover:text-chart-1 text-muted-foreground leading-relaxed">Completed a comprehensive web development program covering HTML, CSS, JavaScript, React, Node.js and deployment workflows. Built multiple projects and a portfolio-ready application.</p>
 
             <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} target="_blank" rel="noreferrer">
-              <div className="flex justify-center xl:px-6 group">
+              <div className=" group">
                 <button className={` flex items-center justify-between rounded-full p-1 bg-secondary text-foreground group-hover:text-chart-1 `}>
                   <p className="px-3 text-base font-bold">Cirtificate</p>
                   <div className=" flex h-8 w-8 items-center justify-center rounded-full bg-black ">
@@ -77,7 +77,7 @@ const Education = () => {
           </motion.article>
 
           {/* Education List */}
-          <motion.article variants={itemVariants} whileHover={{ y: -5 }} className=" relative p-6 rounded-xl   shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+          <motion.article variants={itemVariants} whileHover={{ y: -5 }} className=" relative  rounded-xl   shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
             {/* Gradient Background */}
             <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -133,7 +133,7 @@ const Education = () => {
         </div>
 
         {/* Decorative Timeline */}
-        <motion.div variants={itemVariants} className="relative flex items-center justify-center gap-4 py-4 xl:mt-12">
+        <motion.div variants={itemVariants} className="relative flex items-center justify-center gap-4 py-4 mt-16">
           <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-chart-1" />
           <div className="flex items-center gap-2 text-base text-secondary font-medium px-4 py-2 rounded-full glassyBg border">
             <div className="w-2 h-2 rounded-full bg-chart-1 animate-pulse" />

@@ -8,20 +8,20 @@ import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
 
 const About = () => {
   return (
-    <div className="min-h-screen max-w-3xl flex flex-col text-white">
-      <div className="w-2/12">
+    <div className=" max-w-3xl flex flex-col text-white mt-24">
+      <div className="">
         <SectionTitle params="About Me" />
       </div>
-      <div className=" mt-12">
+      <div className=" mt-10">
         <div className="">
           <ScrollRevealText>
             {" "}
             <Heading>Great development starts with a clear purpose.</Heading>
           </ScrollRevealText>
 
-          <p className="mt-12 text-normal text-muted-foreground hover:text-chart-1">A deep understanding of business goals, user needs, and technical direction guides every stage of development. When these elements align, decisions become clearer, solutions become smarter, and the final product delivers real, lasting value. This clarity ensures that every feature we build serves a purpose and contributes meaningfully to the overall product vision.</p>
+          <p className="mt-7 text-normal text-muted-foreground hover:text-chart-1">A deep understanding of business goals, user needs, and technical direction guides every stage of development. When these elements align, decisions become clearer, solutions become smarter, and the final product delivers real, lasting value. This clarity ensures that every feature we build serves a purpose and contributes meaningfully to the overall product vision.</p>
 
-          <div className=" mt-12 space-y-4 ml-4 ">
+          <div className=" mt-20 space-y-4 ml-4 ">
             <div className="flex gap-4 ">
               <li>Clean code</li>
               <h4>Love writing clean, maintainable code</h4>
@@ -43,7 +43,7 @@ const About = () => {
               <h4>collaborates effectively with others</h4>
             </div>
           </div>
-          <div className="mt-12 text-2xl space-y-5">
+          <div className="mt-24 text-2xl space-y-7">
             <h3>Technologies I am Comfortable With</h3>
             <div className="flex flex-wrap gap-3">
               {["React.js", "Next.js", "Tailwind CSS", "Gsap", "Node.js", "Express.js", "MongoDB", "MySQL", "Firebase", "GitHub"]
@@ -58,13 +58,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="my-7 xl:my-20">
+      <div className="mt-20">
         <GsapleftAnimation>
           <Heading>Tech Stack</Heading>
         </GsapleftAnimation>
       </div>
 
-      <div className="">
+      <div className="mt-10">
         <Swip />
       </div>
     </div>

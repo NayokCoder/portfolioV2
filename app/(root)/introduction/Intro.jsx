@@ -32,9 +32,9 @@ const Intro = () => {
     : "";
 
   return (
-    <section className="min-h-screen max-w-3xl flex flex-col    text-white">
+    <section className="max-w-3xl flex flex-col xl:mt-20">
       {/* Location and time */}
-      <p className="text-normal text-center lg:text-start  font-medium text-secondary">
+      <p className="text-normal text-center xl:text-start  font-medium text-secondary">
         Dhaka Bangladesh
         {formattedTime && (
           <>
@@ -43,13 +43,13 @@ const Intro = () => {
         )}
       </p>
 
-      <section className="py-6 md:py-8 lg:py-12">
+      <section className="c-margin-top">
         {/* Section title */}
         <SectionTitle params="Introduction" />
 
         {/* Headline */}
 
-        <div className="space-y-4 md:space-y-6 lg:space-y-7  mt-5 md:mt-10 lg:mt-16">
+        <div className="space-y-6 lg:space-y-7 text-white  mt-10 lg:mt-12">
           <RevealText delay={0} direction="up">
             <RevealHeading>
               <Heading>Professional web developer focused On your project success.</Heading>
@@ -64,37 +64,37 @@ const Intro = () => {
           {/* <RevealText delay={0} direction="right">
             <p className="text-muted-foreground text-sm ">হ্যালো, আমি মোঃ ফেরদৌস আলম । ছোটবেলা থেকেই টেকনোলজির প্রতি ভীষণ আগ্রহ ছিল। কোডিংয়ের মাধ্যমে সমস্যা সমাধান করতে আর নতুন কিছু তৈরি করতে ভীষণ ভালো লাগে। বর্তমানে আমি একজন মার্ন-স্ট্যাক ডেভেলপার হিসেবে কাজ করছি। ফ্রন্টএন্ডে রিয়েক্ট/নেক্সট এবং ব্যাকএন্ডে নোড, এক্সপ্রেস, ও ডাটাবেস (মাই-এসকিঊ-এল/মংগডিবি) ব্যবহার করি। আমার লক্ষ্য হচ্ছে এমন অ্যাপ্লিকেশন তৈরি করা, যা ব্যবহারকারীদের জীবনকে সহজ এবং কার্যকর করে তুলবে।</p>
           </RevealText> */}
+
+          <RevealText delay={0} direction="left">
+            {/* Tags */}
+            <div className="flex flex-wrap gap-3 mt-15">
+              {["Branding", "Art Direction", "UI Design", "Webflow Development"].map((tag) => (
+                <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </RevealText>
+
+          <RevealText delay={0} direction="down" className="mt-5 lg:mt-8 xl:mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6  ">
+              <div className="rounded-xl w-fit  md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+                <p className="text-lg text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
+                <div className="flex justify-end items-center gap-2 mt-12">
+                  <CountingNumber from={0} to={98} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                  <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">%</span>
+                </div>
+              </div>
+              <div className="rounded-xl   md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+                <p className="text-lg text-gray-200 font-medium mb-4">• Projects completed successfully</p>
+                <div className="flex justify-end items-center gap-2 mt-12">
+                  <CountingNumber from={0} to={50} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                  <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">+</span>
+                </div>
+              </div>
+            </div>
+          </RevealText>
         </div>
-
-        <RevealText delay={0} direction="left">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-3  mt-5 md:mt-10 lg:mt-16">
-            {["Branding", "Art Direction", "UI Design", "Webflow Development"].map((tag) => (
-              <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </RevealText>
-
-        <RevealText delay={0} direction="down" className="">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-8 lg:mt-12 ">
-            <div className="rounded-xl w-fit  md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
-              <p className="text-lg text-gray-200 font-medium mb-4">• Success Rate of satisfied clients</p>
-              <div className="flex justify-end items-center gap-2 mt-12">
-                <CountingNumber from={0} to={98} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
-                <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">%</span>
-              </div>
-            </div>
-            <div className="rounded-xl   md:w-90 lg:w-96 h-60 max-w-sm glassyBg text-white p-6  transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
-              <p className="text-lg text-gray-200 font-medium mb-4">• Projects completed successfully</p>
-              <div className="flex justify-end items-center gap-2 mt-12">
-                <CountingNumber from={0} to={50} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
-                <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">+</span>
-              </div>
-            </div>
-          </div>
-        </RevealText>
       </section>
 
       <Experience />

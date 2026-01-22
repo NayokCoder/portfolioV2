@@ -14,4 +14,7 @@
   .c-heading {
     @apply text-[clamp(2rem,4.5vw,6rem)];
   }
+  .c-margin-top {
+    @apply mt-10 xl:mt-24;
+  }
 }

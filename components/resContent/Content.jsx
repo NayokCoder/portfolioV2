@@ -15,8 +15,8 @@ const Content = () => {
       <Course />
       <Project />
       <Testimonial />
-      <Contact />
-      <Blog />
+      {/* <Contact />
+      <Blog /> */}
     </div>
   );
 };
