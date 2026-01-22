@@ -31,10 +31,10 @@ const Swip = () => {
         loop={true}
         pagination={false}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="w-full max-w-7xl mx-auto py-6 md:py-8 lg:py-12"
+        className="w-full max-w-3xl mx-auto py-6 md:py-8 lg:py-12"
       >
         {skills.map((item) => (
-          <SwiperSlide key={item.id} className="!w-80">
+          <SwiperSlide key={item.id} className=" xl:!w-80 py-4">
             <div
               className="flex flex-col items-center space-y-4 rounded-xl p-8 glassyBg text-white
               transition-all duration-300 cursor-pointer

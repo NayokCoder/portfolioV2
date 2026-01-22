@@ -8,7 +8,7 @@ import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
 
 const About = () => {
   return (
-    <div className="min-h-screen max-w-4xl flex flex-col text-white">
+    <div className="min-h-screen max-w-3xl flex flex-col text-white">
       <div className="w-2/12">
         <SectionTitle params="About Me" />
       </div>
@@ -58,7 +58,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="my-20">
+      <div className="my-7 xl:my-20">
         <GsapleftAnimation>
           <Heading>Tech Stack</Heading>
         </GsapleftAnimation>

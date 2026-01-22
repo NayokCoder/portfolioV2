@@ -119,7 +119,7 @@ const Root = () => {
         </div>
       </div>
 
-      <div className="xl:hidden ">
+      <div className="xl:hidden px-4 md:px-10">
         <Content />
       </div>
     </>
