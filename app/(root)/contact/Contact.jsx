@@ -14,7 +14,7 @@ const Contact = () => {
   const classValue = [{ width: "w-60", minWidth: "min-w-60" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
-    <div className=" mt-6">
+    <div className="mt-20 mb-10 xl:mb-0">
       <section className=" glassyBg rounded-3xl max-w-3xl flex flex-col  c-padding-2">
         <div className="text-white">
           <GsapUpAnimation delay={0} direction="up">

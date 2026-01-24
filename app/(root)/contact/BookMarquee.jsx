@@ -2,7 +2,7 @@ import { Marquee } from "@/components/ui/marquee";
 
 const BookMarquee = () => {
   return (
-    <div className="mt-6 xl:mt-12 glassyBg max-w-3xl rounded-full ">
+    <div className="mt-20 glassyBg max-w-3xl rounded-full ">
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-full py-4 ">
         <Marquee pauseOnHover className="[--duration:5s]">
           <div className="flex flex-row items-center gap-2 c-heading  text-muted">
