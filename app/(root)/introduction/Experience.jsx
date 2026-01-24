@@ -66,9 +66,9 @@ const Experience = () => {
   //   };
   // }, []);
   return (
-    <section className="text-white mt-12">
+    <section className="text-white pt-24">
       {/* Section Title */}
-      <div className="font-bold  space-y-12 mb-12 ">
+      <div className="font-bold space-y-10  mb-16 ">
         <SectionTitle params="Experience" />
         {/* <ScrollRevealParagraph /> */}
         <ScrollRevealText>
@@ -78,7 +78,7 @@ const Experience = () => {
 
       {/* Experience List */}
       <GsapleftAnimation>
-        <div className="space-y-12">
+        <div className="space-y-7">
           {experiences.map((item, idx) => (
             <div
               key={idx}

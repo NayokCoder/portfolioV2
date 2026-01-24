@@ -43,7 +43,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl flex flex-col c-padding text-white">
+    <div className="max-w-3xl flex flex-col  text-white mt-20">
       <div className="glassyBg rounded-3xl flex justify-end    gap-8 overflow-hidden ">
         <div ref={boxRef} className="rounded-3xl flex gap-8 translate-x-20 items-center  will-change-transform ">
           <div className="bg-linear-to-r from-orange-400 to-chart-1 to-70% w-10 h-5 rounded-full"></div>

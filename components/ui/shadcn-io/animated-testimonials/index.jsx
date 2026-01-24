@@ -57,7 +57,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
           >
             <h3 className="text-3xl font-bold text-secondary dark:text-white"> {testimonials[active].name}</h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500 mt-5">{testimonials[active].designation}</p>
-            <motion.p className="mt-8 text-4xl text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-500 dark:text-neutral-300">
               "
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
             </motion.p>
           </motion.div>
 
-          <div className="mt-12">
+          <div className="mt-7">
             <div className="flex gap-4 pt-12 md:pt-0">
               <button onClick={handlePrev} className="group/button flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
                 <ChevronLeft className="h-7 w-7 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
@@ -99,7 +99,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false, className
         </div>
       </div>
       <div className="flex justify-end px-6">
-        <div className="relative h-72 w-60 py-10">
+        <div className="relative w-40 h-52 md:h-72 md:w-60 py-10">
           <AnimatePresence>
             {testimonials.map((testimonial, index) => (
               <motion.div

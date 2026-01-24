@@ -4,6 +4,7 @@ import { ScrollArea } from "@/components/ui/Scroll-area";
 import { navItems } from "@/lib/menuNav";
 import MenuNav from "@/components/layout/menuNav/MenuNav";
 import { gsap } from "gsap";
+import Content from "@/components/resContent/Content";
 
 const Root = () => {
   const parentRef = useRef(null);
@@ -116,6 +117,10 @@ const Root = () => {
             </ScrollArea>
           </content>
         </div>
+      </div>
+
+      <div className="xl:hidden px-4 md:px-10 lg:mx-auto xl:mx-0">
+        <Content />
       </div>
     </>
   );
