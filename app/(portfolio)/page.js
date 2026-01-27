@@ -1,4 +1,4 @@
-import Root from "../(root)/rootFile/Root";
+import Root from "./(root)/rootFile/Root";
 
 const Page = () => {
   return <Root />;

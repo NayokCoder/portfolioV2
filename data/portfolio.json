@@ -3,7 +3,12 @@
     "location": "Dhaka Bangladesh",
     "headline": "Professional web developer focused On your project success.",
     "bio": "I'm a MERN Stack Developer focused on building modern, user-friendly web solutions using Next.js, React, Node.js, and more. Clean code, seamless design, real-world impact.",
-    "tags": ["Branding", "Art Direction", "UI Design", "Webflow Development"],
+    "tags": [
+      "Branding",
+      "Art Direction",
+      "UI Design",
+      "Webflow Development"
+    ],
     "successRate": 98,
     "projectsCompleted": "50+"
   },
@@ -37,20 +42,86 @@
       "Fast learner",
       "Team collaboration"
     ],
-    "technologies": ["React.js", "Next.js", "Tailwind CSS", "Gsap", "Node.js", "Express.js", "MongoDB", "MySQL", "Firebase", "GitHub"]
+    "technologies": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Gsap",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MySQL",
+      "Firebase",
+      "GitHub"
+    ]
   },
   "skills": [
-    { "id": 1, "logo": "/asset/Tech-logo/react.png", "name": "React.js", "proficiency": "Intermediate" },
-    { "id": 2, "logo": "/asset/Tech-logo/node.png", "name": "Node.js", "proficiency": "Intermediate" },
-    { "id": 3, "logo": "/asset/Tech-logo/js.png", "name": "JavaScript", "proficiency": "Intermediate" },
-    { "id": 4, "logo": "/asset/Tech-logo/typescript.png", "name": "TypeScript", "proficiency": "Beginner" },
-    { "id": 5, "logo": "/asset/Tech-logo/mongo.png", "name": "MongoDB", "proficiency": "Intermediate" },
-    { "id": 6, "logo": "/asset/Tech-logo/html.png", "name": "HTML", "proficiency": "Advanced" },
-    { "id": 7, "logo": "/asset/Tech-logo/css.png", "name": "CSS", "proficiency": "Advanced" },
-    { "id": 8, "logo": "/asset/Tech-logo/python.png", "name": "Python", "proficiency": "Beginner" },
-    { "id": 9, "logo": "/asset/Tech-logo/figma.png", "name": "Figma", "proficiency": "Intermediate" },
-    { "id": 10, "logo": "/asset/Tech-logo/next.png", "name": "Next.js", "proficiency": "Intermediate" },
-    { "id": 11, "logo": "/asset/Tech-logo/mysql.png", "name": "MySQL", "proficiency": "Intermediate" }
+    {
+      "id": 1,
+      "logo": "/asset/Tech-logo/react.png",
+      "name": "React.js",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 2,
+      "logo": "/asset/Tech-logo/node.png",
+      "name": "Node.js",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 3,
+      "logo": "/asset/Tech-logo/js.png",
+      "name": "JavaScript",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 4,
+      "logo": "/asset/Tech-logo/typescript.png",
+      "name": "TypeScript",
+      "proficiency": "Beginner"
+    },
+    {
+      "id": 5,
+      "logo": "/asset/Tech-logo/mongo.png",
+      "name": "MongoDB",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 6,
+      "logo": "/asset/Tech-logo/html.png",
+      "name": "HTML",
+      "proficiency": "Advanced"
+    },
+    {
+      "id": 7,
+      "logo": "/asset/Tech-logo/css.png",
+      "name": "CSS",
+      "proficiency": "Advanced"
+    },
+    {
+      "id": 8,
+      "logo": "/asset/Tech-logo/python.png",
+      "name": "Python",
+      "proficiency": "Beginner"
+    },
+    {
+      "id": 9,
+      "logo": "/asset/Tech-logo/figma.png",
+      "name": "Figma",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 10,
+      "logo": "/asset/Tech-logo/next.png",
+      "name": "Next.js",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 11,
+      "logo": "/asset/Tech-logo/mysql.png",
+      "name": "MySQL",
+      "proficiency": "Intermediate"
+    }
   ],
   "education": {
     "certificate": {
@@ -90,7 +161,11 @@
       "name": "Eco-Adventure Experiences",
       "year": 2024,
       "description": "A platform for booking eco-friendly adventure trips.",
-      "tags": ["React", "Node", "MongoDB"],
+      "tags": [
+        "React",
+        "Node",
+        "MongoDB"
+      ],
       "image": "/asset/project/p (1).avif",
       "live_link": "https://eco-adventure.com"
     },
@@ -99,7 +174,11 @@
       "name": "Movie Portal",
       "year": 2025,
       "description": "A comprehensive movie database and review platform.",
-      "tags": ["Next.js", "Tailwind", "API"],
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "API"
+      ],
       "image": "/asset/project/p (2).avif",
       "live_link": "https://movie-portal.com"
     },
@@ -108,7 +187,11 @@
       "name": "E-Commerce System",
       "year": 2023,
       "description": "Full-featured online shopping platform.",
-      "tags": ["MERN", "Redux", "Stripe"],
+      "tags": [
+        "MERN",
+        "Redux",
+        "Stripe"
+      ],
       "image": "/asset/project/p (3).avif",
       "live_link": "https://ecommerce.com"
     }
