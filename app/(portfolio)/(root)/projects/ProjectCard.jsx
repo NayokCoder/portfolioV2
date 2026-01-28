@@ -14,7 +14,7 @@ const ProjectCard = () => {
     async function loadProjects() {
       try {
         const data = await getProjects();
-        // console.log("Fetched projects:", data);
+        console.log("Fetched projects:", data);
         setProjects(data.data);
       } catch (error) {
         console.error("Failed to fetch projects", error);
@@ -34,7 +34,7 @@ const ProjectCard = () => {
         <GsapleftAnimation key={item.id}>
           <div className="max-w-3xl rounded-3xl flex gap-8 items-center relative">
             {/* Image */}
-            <img src={item.image || "/asset/Project/p (1).avif"} alt={item.title} className="rounded-3xl w-full h-[300px] xl:h-[600px] object-cover" />
+            <img src={item.image || "/asset/project/p1.avif"} alt={item.title} className="rounded-3xl w-full h-[300px] xl:h-[600px] object-cover" />
 
             {/* Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 rounded-3xl flex items-end justify-center md:py-2 lg:py-6 xl:py-10">
