@@ -14,7 +14,7 @@ const ProjectCard = () => {
     async function loadProjects() {
       try {
         const data = await getProjects();
-        // console.log("Fetched projects:", data);
+        console.log("Fetched projects:", data);
         setProjects(data.data);
       } catch (error) {
         console.error("Failed to fetch projects", error);
