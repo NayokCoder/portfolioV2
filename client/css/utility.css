@@ -1,0 +1,18 @@
+@custom-variant dark (&:is(.dark *));
+@utility animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+    background: transparent;
+  }
+  html {
+    @apply bg-background;
+  }
+}

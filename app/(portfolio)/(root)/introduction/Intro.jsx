@@ -1,0 +1,108 @@
+"use client";
+
+import { CountingNumber } from "@/components/ui/Counting-number";
+import { useEffect, useState } from "react";
+import Experience from "./Experience";
+import SectionTitle from "@/components/sectionTitle/SectionTitle";
+import RevealText from "@/components/ui/RevealText";
+import Heading from "@/components/Heading";
+import RevealHeading from "./RevealHeading";
+
+const Intro = () => {
+  const [time, setTime] = useState(null);
+
+  useEffect(() => {
+    // Update time immediately and then every second
+    const updateTime = () => setTime(new Date());
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    updateTime(); // Set initial time
+
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval); // cleanup
+  }, []);
+
+  // Format time
+  const formattedTime = time
+    ? new Intl.DateTimeFormat("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }).format(time)
+    : "";
+
+  return (
+    <section className="max-w-3xl flex flex-col xl:mt-20">
+      {/* Location and time */}
+      <p className="text-normal text-center xl:text-start  font-medium text-secondary">
+        Dhaka Bangladesh
+        {formattedTime && (
+          <>
+            , <span className="text-chart-1">{formattedTime}</span>
+          </>
+        )}
+      </p>
+
+      <section className="c-margin-top">
+        {/* Section title */}
+        <SectionTitle params="Introduction" />
+
+        {/* Headline */}
+
+        <div className="space-y-6 lg:space-y-7 text-white  mt-10 lg:mt-12">
+          <RevealText delay={0} direction="up">
+            <RevealHeading>
+              <Heading>Professional web developer focused On your project success.</Heading>
+            </RevealHeading>
+          </RevealText>
+
+          <RevealText delay={0} direction="left">
+            {/* Subheading */}
+            <p className="text-muted-foreground text-normal font-medium  ">&quot;I am a passionate MERN Stack Developer with hands-on experience in building full-stack applications. Skilled in JavaScript, React, Node.js, Express.js, and database design using MySQL and MongoDB. I love solving problems, learning new technologies, and developing solutions that make a real impact.&quot;</p>
+          </RevealText>
+
+          {/* <RevealText delay={0} direction="right">
+            <p className="text-muted-foreground text-sm ">হ্যালো, আমি মোঃ ফেরদৌস আলম । ছোটবেলা থেকেই টেকনোলজির প্রতি ভীষণ আগ্রহ ছিল। কোডিংয়ের মাধ্যমে সমস্যা সমাধান করতে আর নতুন কিছু তৈরি করতে ভীষণ ভালো লাগে। বর্তমানে আমি একজন মার্ন-স্ট্যাক ডেভেলপার হিসেবে কাজ করছি। ফ্রন্টএন্ডে রিয়েক্ট/নেক্সট এবং ব্যাকএন্ডে নোড, এক্সপ্রেস, ও ডাটাবেস (মাই-এসকিঊ-এল/মংগডিবি) ব্যবহার করি। আমার লক্ষ্য হচ্ছে এমন অ্যাপ্লিকেশন তৈরি করা, যা ব্যবহারকারীদের জীবনকে সহজ এবং কার্যকর করে তুলবে।</p>
+          </RevealText> */}
+
+          <RevealText delay={0} direction="left">
+            {/* Tags */}
+            <div className="flex flex-wrap gap-3 mt-15">
+              {["E-commerce App", "Admin Dashboard", "Authentication System", "API Integration"].map((tag) => (
+                <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </RevealText>
+        </div>
+
+        <div className="w-full">
+          {/* Statistics */}
+          <RevealText delay={0} direction="down" className="mt-5 w-full lg:mt-8 xl:mt-10">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+              <div className="rounded-xl glassyBg text-white p-6 md:p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+                <p className="text-sm md:text-base lg:text-lg text-gray-200 font-medium mb-3 md:mb-4">• Success Rate of satisfied clients</p>
+                <div className="flex justify-end items-center gap-2 mt-8 md:mt-12">
+                  <CountingNumber from={0} to={98} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                  <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">%</span>
+                </div>
+              </div>
+              <div className="rounded-xl glassyBg text-white p-6 md:p-8 transition-all duration-300 hover:bg-[rgba(40,40,40,0.45)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.45),inset_0_0_35px_rgba(255,255,255,0.08)]">
+                <p className="text-sm md:text-base lg:text-lg text-gray-200 font-medium mb-3 md:mb-4">• Projects completed successfully</p>
+                <div className="flex justify-end items-center gap-2 mt-8 md:mt-12">
+                  <CountingNumber from={0} to={50} duration={3} className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-extrabold drop-shadow-lg" />
+                  <span className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-semibold opacity-90">+</span>
+                </div>
+              </div>
+            </div>
+          </RevealText>
+        </div>
+      </section>
+
+      <Experience />
+    </section>
+  );
+};
+
+export default Intro;
