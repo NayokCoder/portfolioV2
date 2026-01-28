@@ -68,7 +68,7 @@ const Intro = () => {
           <RevealText delay={0} direction="left">
             {/* Tags */}
             <div className="flex flex-wrap gap-3 mt-15">
-              {["Branding", "Art Direction", "UI Design", "Webflow Development"].map((tag) => (
+              {["E-commerce App", "Admin Dashboard", "Authentication System", "API Integration"].map((tag) => (
                 <span key={tag} className="px-4 py-2 rounded-full glassyBg text-secondary text-normal hover:bg-secondary hover:text-accent-foreground transition">
                   {tag}
                 </span>

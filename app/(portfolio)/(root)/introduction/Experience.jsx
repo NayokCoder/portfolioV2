@@ -4,6 +4,7 @@ import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
 
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
+import Link from "next/link";
 import React from "react";
 // import { useEffect, useRef } from "react";
 // import gsap from "gsap";
@@ -14,23 +15,25 @@ import React from "react";
 const Experience = () => {
   const experiences = [
     {
-      company: "Drake",
-      role: "Product Designer",
+      company: "Uy Systems Ltd.",
+      link: "https://www.uysys.com/",
+      role: "Frontend Developer",
       date: "2022 - Present",
     },
     {
-      company: "Minus",
-      role: "Product Designer",
+      company: "Business Network",
+      link: "https://www.bnet-bd.com/",
+
+      role: "Junior NOC Engineer",
       date: "2021 - 2022",
     },
     {
-      company: "Avox Studio",
-      role: "Product Designer",
+      company: "Online Freelance Platform",
+      link: "",
+      role: "Junior Web Developer",
       date: "2020 - 2021",
     },
   ];
-
-  // const boxRef = useRef(null);
 
   // useEffect(() => {
   //   const box = boxRef.current;
@@ -89,7 +92,13 @@ const Experience = () => {
       "
             >
               {/* Company */}
-              <h3 className="text-gray-400 text-lg font-medium">{item.company}</h3>
+              {item.link ? (
+                <Link href={item.link} target="_blank" className="text-gray-400 text-lg font-medium">
+                  {item.company}
+                </Link>
+              ) : (
+                <span className="text-gray-400 text-lg font-medium">{item.company}</span>
+              )}
 
               {/* Role */}
               <p className="text-2xl font-semibold mt-1 text-white group-hover:text-chart-1">{item.role}</p>
@@ -104,7 +113,7 @@ const Experience = () => {
           text-sm text-gray-300
           shadow-[0_4px_15px_rgba(0,0,0,0.25)]
           transition-all duration-300
-          group-hover:border-chart-1 group-hover:shadow-lg
+          group-hover:border-chart-1 group-hover:shadow-lg font-bold
         "
               >
                 {item.date}

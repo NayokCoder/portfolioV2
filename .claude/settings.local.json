@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git prune:*)",
+      "Bash(git gc:*)",
+      "Bash(cd /home/fderdous/Dev\\\\ /portfolioV3/client && git fsck:*)",
+      "Bash(git rev-list --objects nayok)",
+      "Bash(git cat-file:*)",
+      "Bash(sort:*)",
+      "Bash(cd /home/fderdous/Dev\\\\ /portfolioV3/client && git rev-list:*)",
+      "Bash(cd:*)",
+      "Bash(git reflog expire:*)",
+      "Bash(git rev-list:*)",
+      "Bash(git stash pop)"
     ],
     "deny": [],
     "ask": []

@@ -35,7 +35,7 @@ const Sidebar = () => {
   const classValue = [{ width: "w-full  ", minWidth: "" }, { bgColour: "bg-ring" }, { padding: "py-0" }, { text: "text-secondary" }];
 
   return (
-    <div className="flex justify-center w-screen lg:max-w-md   px-4 md:px-10  py-4 md:py-10  xl:py-0">
+    <div className="flex justify-center w-screen lg:max-w-3xl xl:max-w-md   px-4 md:px-10  py-4 md:py-10  xl:py-0">
       <div className="w-full  xl:max-w-3xl rounded-2xl glassyBg">
         <div className="relative flex flex-col items-center gap-6 px-4 py-6 lg:px-6 lg:py-10">
           {/* Header */}

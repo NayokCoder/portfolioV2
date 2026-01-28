@@ -1,6 +1,7 @@
 "use client";
 
 import GsapleftAnimation from "@/components/ui/GsapleftAnimation";
+import ProjectCardSkeleton from "@/components/ui/ProjectCardSkeleton";
 import { getProjects } from "@/lib/api/projects/api-projects";
 import { ArrowUpRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
@@ -25,7 +26,7 @@ const ProjectCard = () => {
     loadProjects();
   }, []);
 
-  if (loading) return <p>Loading projects...</p>;
+  if (loading) return <ProjectCardSkeleton count={3} />;
 
   return (
     <div className="rounded-3xl grid grid-cols-1 gap-6 xl:gap-10 mt-10 relative">
